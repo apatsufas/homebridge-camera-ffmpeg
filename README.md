@@ -108,6 +108,11 @@ Other users have been sharing configurations that work for them on our GitHub si
 - `debug`: Includes debugging output from the main FFmpeg process in the Homebridge log. (Default: `false`)
 - `debugReturn`: Includes debugging output from the FFmpeg used for return audio in the Homebridge log. (Default: `false`)
 
+### Optional audioConfig Parameters (only used if audio is enabled in videoConfig)
+
+- `acodec`: Set the codec used for encoding audio sent to HomeKit, must be aac-based.  You can change to a hardware accelerated audio codec with this option, if one is available. (Default: `libfdk_aac`)
+- `profile`: The profile used by the audio codec. (Default: `none`)
+
 #### More Complicated Example
 
 ```json
