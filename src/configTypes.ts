@@ -24,6 +24,7 @@ export type CameraConfig = {
   motionTimeout: number;
   unbridge: boolean;
   videoConfig: VideoConfig;
+  audioConfig: AudioConfig;
 };
 
 export type VideoConfig = {
@@ -45,4 +46,9 @@ export type VideoConfig = {
   audio: boolean;
   debug: boolean;
   debugReturn: boolean;
+};
+
+export type AudioConfig = {
+  acodec: string;
+  profile: string;
 };

@@ -67,6 +67,7 @@ export class StreamingDelegate implements CameraStreamingDelegate {
   private readonly videoConfig: VideoConfig;
   private readonly videoProcessor: string;
   private readonly interfaceName?: string;
+  private readonly audioConfig: AudioConfig;
   readonly controller: CameraController;
 
   // keep track of sessions
@@ -77,6 +78,7 @@ export class StreamingDelegate implements CameraStreamingDelegate {
   constructor(log: Logger, cameraConfig: CameraConfig, api: API, hap: HAP, videoProcessor: string, interfaceName?: string) { // eslint-disable-line @typescript-eslint/explicit-module-boundary-types
     this.log = log;
     this.videoConfig = cameraConfig.videoConfig;
+    this.audioConfig = cameraConfig.audioConfig;
     this.hap = hap;
 
     this.cameraName = cameraConfig.name;
@@ -333,8 +335,8 @@ export class StreamingDelegate implements CameraStreamingDelegate {
     if (this.videoConfig.audio) {
       ffmpegArgs += // Audio
         (this.videoConfig.mapaudio ? ' -map ' + this.videoConfig.mapaudio : ' -vn -sn -dn') +
-        ' -codec:a libfdk_aac' +
-        ' -profile:a aac_eld' +
+        ' -codec:a ' + (this.audioConfig.acodec ?  this.audioConfig.acodec : 'libfdk_aac') +
+				(this.audioConfig.profile ? ' -profile:a ' + this.audioConfig.profile : '') +
         ' -flags +global_header' +
         ' -f null' +
         ' -ar ' + request.audio.sample_rate + 'k' +
