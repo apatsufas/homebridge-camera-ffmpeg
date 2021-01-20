@@ -181,5 +181,5 @@ Other users have been sharing configurations that work for them on our GitHub si
 
 ## Credit
 
--Homebridge Camera FFmpeg is based on code originally written by [Khaos Tian](https://twitter.com/khaost).
--Forked from Homebridge Camera FFmpeg by [Sunoo](https://github.com/Sunoo/homebridge-camera-ffmpeg).
+- Homebridge Camera FFmpeg is based on code originally written by [Khaos Tian](https://twitter.com/khaost).
+- Forked from Homebridge Camera FFmpeg by [Sunoo](https://github.com/Sunoo/homebridge-camera-ffmpeg).
