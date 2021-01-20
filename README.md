@@ -1,4 +1,4 @@
-# Homebridge Camera FFmpeg
+# Homebridge Camera FFmpeg (fork)
 
 [![npm](https://badgen.net/npm/v/homebridge-camera-ffmpeg) ![npm](https://badgen.net/npm/dt/homebridge-camera-ffmpeg)](https://www.npmjs.com/package/homebridge-camera-ffmpeg) [![verified-by-homebridge](https://badgen.net/badge/homebridge/verified/purple)](https://github.com/homebridge/homebridge/wiki/Verified-Plugins)
 
@@ -182,3 +182,4 @@ Other users have been sharing configurations that work for them on our GitHub si
 ## Credit
 
 Homebridge Camera FFmpeg is based on code originally written by [Khaos Tian](https://twitter.com/khaost).
+Forked from Homebridge Camera FFmpeg by [Sunoo](https://github.com/Sunoo/homebridge-camera-ffmpeg).
