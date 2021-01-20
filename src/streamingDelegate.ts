@@ -25,7 +25,7 @@ import ffmpegPath from 'ffmpeg-for-homebridge';
 import getPort from 'get-port';
 import os from 'os';
 import { networkInterfaceDefault } from 'systeminformation';
-import { CameraConfig, VideoConfig } from './configTypes';
+import { AudioConfig, CameraConfig, VideoConfig } from './configTypes';
 import { FfmpegProcess } from './ffmpeg';
 import { Logger } from './logger';
 
