@@ -4,6 +4,9 @@
 
 [Homebridge](https://homebridge.io) Plugin Providing [FFmpeg](https://www.ffmpeg.org)-based Camera Support
 
+This fork adds the options to set an audio coded and an corresponding audio profile.
+I have setup homebridge an a Mac which runs High Sierra and I didn't want to compile ffmpeg with support for third party codecs. As MacOS does provide Core Audio and an AAC-encoder I wanted the option to use that.
+
 ## Installation
 
 Before installing this plugin, you should install Homebridge using the [official instructions](https://github.com/homebridge/homebridge/wiki).
