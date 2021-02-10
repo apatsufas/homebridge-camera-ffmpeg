@@ -335,8 +335,8 @@ export class StreamingDelegate implements CameraStreamingDelegate {
     if (this.videoConfig.audio) {
       ffmpegArgs += // Audio
         (this.videoConfig.mapaudio ? ' -map ' + this.videoConfig.mapaudio : ' -vn -sn -dn') +
-        ' -codec:a ' + (this.audioConfig.acodec ?  this.audioConfig.acodec : 'libfdk_aac') +
-				(this.audioConfig.profile ? ' -profile:a ' + this.audioConfig.profile : '') +
+        ' -codec:a ' + (this.audioConfig && this.audioConfig.acodec ?  this.audioConfig.acodec : 'libfdk_aac') +
+				(this.audioConfig && this.audioConfig.profile ? ' -profile:a ' + this.audioConfig.profile : '') +
         ' -flags +global_header' +
         ' -f null' +
         ' -ar ' + request.audio.sample_rate + 'k' +
