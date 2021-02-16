@@ -79,6 +79,7 @@ export class StreamingDelegate implements CameraStreamingDelegate {
     this.log = log;
     this.videoConfig = cameraConfig.videoConfig!;
     this.audioConfig = cameraConfig.audioConfig!;
+
     this.hap = hap;
 
     this.cameraName = cameraConfig.name!;
