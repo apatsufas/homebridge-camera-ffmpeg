@@ -1,7 +1,7 @@
 {
   "displayName": "Homebridge Camera FFmpeg",
   "name": "homebridge-camera-ffmpeg",
-  "version": "3.0.5",
+  "version": "3.0.6",
   "description": "Homebridge Plugin Providing FFmpeg-based Camera Support",
   "main": "dist/index.js",
   "license": "ISC",
@@ -70,7 +70,6 @@
   "dependencies": {
     "ffmpeg-for-homebridge": "^0.0.9",
     "get-port": "^5.1.1",
-    "mqtt": "^4.2.6",
-    "systeminformation": "^5.3.2"
+    "mqtt": "^4.2.6"
   }
 }

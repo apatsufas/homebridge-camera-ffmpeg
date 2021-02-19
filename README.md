@@ -61,6 +61,7 @@ Other users have been sharing configurations that work for them on our GitHub si
 - `doorbell`: Exposes the doorbell device for this camera. This can be triggered with [dummy switches](https://sunoo.github.io/homebridge-camera-ffmpeg/automation/switch.html), [MQTT messages](https://sunoo.github.io/homebridge-camera-ffmpeg/automation/mqtt.html), or [via HTTP](https://sunoo.github.io/homebridge-camera-ffmpeg/automation/http.html), depending on what features are enabled in the config. (Default: `false`)
 - `switches`: Enables dummy switches to trigger motion and/or doorbell, if either of those are enabled. When enabled there will be an additional switch that triggers the motion or doorbell event. See the project site for [more detailed instructions](https://sunoo.github.io/homebridge-camera-ffmpeg/automation/switch.html). (Default: `false`)
 - `motionTimeout`: The number of seconds after triggering to reset the motion sensor. Set to 0 to disable resetting of motion trigger for MQTT or HTTP. (Default: `1`)
+- `motionDoorbell`: Rings the doorbell when motion is activated. This allows for motion alerts to appear on Apple TVs. (Default: `false`)
 - `manufacturer`: Set the manufacturer name for display in the Home app. (Default: `Homebridge`)
 - `model`: Set the model for display in the Home app. (Default: `Camera FFmpeg`)
 - `serialNumber`: Set the serial number for display in the Home app. (Default: `SerialNumber`)
@@ -170,7 +171,6 @@ Other users have been sharing configurations that work for them on our GitHub si
 ### Rarely Needed Parameters
 
 - `videoProcessor`: Defines which video processor is used to decode and encode videos, must take the same parameters as FFmpeg. Common uses would be `avconv` or the path to a custom-compiled version of FFmpeg. If not set, will use the included version of FFmpeg, or the version of FFmpeg installed on the system if no included version is available.
-- `interfaceName`: Selects which network interface to use for video streaming to HomeKit. If you have multiple active network interfaces in your system, you may need to set this. If not set, the first available network interface is used, and a mismatch will cause HomeKit to discard the video stream.
 
 #### Rare Option Example
 
@@ -178,7 +178,6 @@ Other users have been sharing configurations that work for them on our GitHub si
 {
   "platform": "Camera-ffmpeg",
   "videoProcessor": "/usr/bin/ffmpeg",
-  "interfaceName": "eth0",
   "cameras": []
 }
 ```

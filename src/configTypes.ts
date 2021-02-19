@@ -4,7 +4,6 @@ export type FfmpegPlatformConfig = {
   platform: PlatformName | PlatformIdentifier;
   name?: string;
   videoProcessor?: string;
-  interfaceName?: string;
   mqtt?: string;
   portmqtt?: number;
   tlsmqtt?: boolean;
@@ -26,6 +25,7 @@ export type CameraConfig = {
   doorbell?: boolean;
   switches?: boolean;
   motionTimeout?: number;
+  motionDoorbell?: boolean;
   unbridge?: boolean;
   videoConfig?: VideoConfig;
   audioConfig?: AudioConfig;
