@@ -9,7 +9,6 @@ export type FfmpegPlatformConfig = {
   tlsmqtt?: boolean;
   usermqtt?: string;
   passmqtt?: string;
-  topic?: string;
   porthttp?: number;
   localhttp?: boolean;
   cameras?: Array<CameraConfig>;
@@ -26,6 +25,7 @@ export type CameraConfig = {
   switches?: boolean;
   motionTimeout?: number;
   motionDoorbell?: boolean;
+  mqtt?: MqttCameraConfig;
   unbridge?: boolean;
   videoConfig?: VideoConfig;
   audioConfig?: AudioConfig;
@@ -50,6 +50,15 @@ export type VideoConfig = {
   audio?: boolean;
   debug?: boolean;
   debugReturn?: boolean;
+};
+
+export type MqttCameraConfig = {
+  motionTopic?: string;
+  motionMessage?: string;
+  motionResetTopic?: string;
+  motionResetMessage?: string;
+  doorbellTopic?: string;
+  doorbellMessage?: string;
 };
 
 export type AudioConfig = {
